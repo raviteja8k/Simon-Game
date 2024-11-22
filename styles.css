@@ -17,11 +17,17 @@ body {
 
 }
 
+.row {
+  display: flex;
+  justify-content: center; /* Centers the tiles horizontally */
+  gap: 10px; /* Adds space between tiles */
+}
+
 .btn {
-  margin: 25px;
-  display: inline-block;
+  flex: 1 1 calc(50% - 10px); /* Each button takes 50% of the row width minus the gap */
+  max-width: 200px; /* Prevent buttons from exceeding 50% width */
+  margin: 10px 0; /* Adds spacing between rows */
   height: 200px;
-  width: 200px;
   border: 10px solid black;
   border-radius: 20%;
 }

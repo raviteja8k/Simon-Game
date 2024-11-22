@@ -42,6 +42,7 @@ function nextSequence() {
 
 // Check the user's answer
 function checkAnswer(currentLevel) {
+     
     if (userClickedPattern[currentLevel] === gamePattern[currentLevel]) {
         console.log("success");
         // Check if the user has completed the sequence
@@ -72,7 +73,8 @@ function startOver() {
 }
 
 // Start the game on a keypress
-$(document).keypress(function() {
+// $(document).keypress(function() {
+$(document).on("keypress touchstart", function () {
     if (level === 0) { // Only start if the game isn't already running
         $("h1").text("Level " + level);
         nextSequence();
